@@ -14,8 +14,8 @@ type Code struct {
 	Name     string  //股票名称
 	Code     string  //股票代码
 	Multiple uint16  //倍数,基本是0x64=100
-	Decimal  int8    //小数点,基本是2
-	PreClose float64 //未知
+	Decimal  int8    //小数点,基本是2 小数点的位数 价格转换用
+	PreClose float64 //上一日收盘价
 }
 
 func (this *Code) String() string {
